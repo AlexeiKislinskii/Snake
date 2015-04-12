@@ -1,0 +1,46 @@
+﻿Построение начато 20.03.2015 1:06:19.
+     1>Проект "c:\Users\Алексей\documents\visual studio 2012\Projects\Игра Змейка\Игра Змейка\Игра Змейка.vcxproj" в узле 2 (целевые объекты Build).
+     1>ClCompile:
+         D:\Visual12\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt all.cpp main.cpp
+         main.cpp
+         all.cpp
+     1>c:\users\алексей\documents\visual studio 2012\projects\игра змейка\игра змейка\all.cpp(226): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+     1>c:\users\алексей\documents\visual studio 2012\projects\игра змейка\игра змейка\all.cpp(230): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+     1>c:\users\алексей\documents\visual studio 2012\projects\игра змейка\игра змейка\all.cpp(363): warning C4244: аргумент: преобразование "double" в "unsigned long", возможна потеря данных
+     1>c:\users\алексей\documents\visual studio 2012\projects\игра змейка\игра змейка\all.cpp(363): warning C4996: '_sleep': This function or variable has been superceded by newer library or operating system functionality. Consider using Sleep instead. See online help for details.
+                 d:\visual12\vc\include\stdlib.h(881): см. объявление "_sleep"
+     1>c:\users\алексей\documents\visual studio 2012\projects\игра змейка\игра змейка\all.cpp(364): warning C4244: аргумент: преобразование "double" в "unsigned long", возможна потеря данных
+     1>c:\users\алексей\documents\visual studio 2012\projects\игра змейка\игра змейка\all.cpp(364): warning C4996: '_sleep': This function or variable has been superceded by newer library or operating system functionality. Consider using Sleep instead. See online help for details.
+                 d:\visual12\vc\include\stdlib.h(881): см. объявление "_sleep"
+     1>c:\users\алексей\documents\visual studio 2012\projects\игра змейка\игра змейка\all.cpp(365): warning C4244: аргумент: преобразование "double" в "unsigned long", возможна потеря данных
+     1>c:\users\алексей\documents\visual studio 2012\projects\игра змейка\игра змейка\all.cpp(365): warning C4996: '_sleep': This function or variable has been superceded by newer library or operating system functionality. Consider using Sleep instead. See online help for details.
+                 d:\visual12\vc\include\stdlib.h(881): см. объявление "_sleep"
+     1>c:\users\алексей\documents\visual studio 2012\projects\игра змейка\игра змейка\all.cpp(366): warning C4244: аргумент: преобразование "double" в "unsigned long", возможна потеря данных
+     1>c:\users\алексей\documents\visual studio 2012\projects\игра змейка\игра змейка\all.cpp(366): warning C4996: '_sleep': This function or variable has been superceded by newer library or operating system functionality. Consider using Sleep instead. See online help for details.
+                 d:\visual12\vc\include\stdlib.h(881): см. объявление "_sleep"
+     1>c:\users\алексей\documents\visual studio 2012\projects\игра змейка\игра змейка\all.cpp(367): warning C4996: '_sleep': This function or variable has been superceded by newer library or operating system functionality. Consider using Sleep instead. See online help for details.
+                 d:\visual12\vc\include\stdlib.h(881): см. объявление "_sleep"
+     1>c:\users\алексей\documents\visual studio 2012\projects\игра змейка\игра змейка\all.cpp(368): warning C4244: аргумент: преобразование "double" в "unsigned long", возможна потеря данных
+     1>c:\users\алексей\documents\visual studio 2012\projects\игра змейка\игра змейка\all.cpp(368): warning C4996: '_sleep': This function or variable has been superceded by newer library or operating system functionality. Consider using Sleep instead. See online help for details.
+                 d:\visual12\vc\include\stdlib.h(881): см. объявление "_sleep"
+     1>c:\users\алексей\documents\visual studio 2012\projects\игра змейка\игра змейка\all.cpp(369): warning C4244: аргумент: преобразование "double" в "unsigned long", возможна потеря данных
+     1>c:\users\алексей\documents\visual studio 2012\projects\игра змейка\игра змейка\all.cpp(369): warning C4996: '_sleep': This function or variable has been superceded by newer library or operating system functionality. Consider using Sleep instead. See online help for details.
+                 d:\visual12\vc\include\stdlib.h(881): см. объявление "_sleep"
+     1>c:\users\алексей\documents\visual studio 2012\projects\игра змейка\игра змейка\all.cpp(370): warning C4244: аргумент: преобразование "double" в "unsigned long", возможна потеря данных
+     1>c:\users\алексей\documents\visual studio 2012\projects\игра змейка\игра змейка\all.cpp(370): warning C4996: '_sleep': This function or variable has been superceded by newer library or operating system functionality. Consider using Sleep instead. See online help for details.
+                 d:\visual12\vc\include\stdlib.h(881): см. объявление "_sleep"
+     1>c:\users\алексей\documents\visual studio 2012\projects\игра змейка\игра змейка\all.cpp(371): warning C4244: аргумент: преобразование "double" в "unsigned long", возможна потеря данных
+     1>c:\users\алексей\documents\visual studio 2012\projects\игра змейка\игра змейка\all.cpp(371): warning C4996: '_sleep': This function or variable has been superceded by newer library or operating system functionality. Consider using Sleep instead. See online help for details.
+                 d:\visual12\vc\include\stdlib.h(881): см. объявление "_sleep"
+     1>c:\users\алексей\documents\visual studio 2012\projects\игра змейка\игра змейка\all.cpp(372): warning C4996: '_sleep': This function or variable has been superceded by newer library or operating system functionality. Consider using Sleep instead. See online help for details.
+                 d:\visual12\vc\include\stdlib.h(881): см. объявление "_sleep"
+         Создание кода...
+       Link:
+         D:\Visual12\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"c:\users\алексей\documents\visual studio 2012\Projects\Игра Змейка\Debug\Игра Змейка.exe" /INCREMENTAL /NOLOGO /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /manifestinput:D:\Visual12\VC\Include\Manifest\dpiaware.manifest /DEBUG /PDB:"c:\users\алексей\documents\visual studio 2012\Projects\Игра Змейка\Debug\Игра Змейка.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"c:\users\алексей\documents\visual studio 2012\Projects\Игра Змейка\Debug\Игра Змейка.lib" /MACHINE:X86 Debug\all.obj
+         Debug\main.obj
+         Игра Змейка.vcxproj -> c:\users\алексей\documents\visual studio 2012\Projects\Игра Змейка\Debug\Игра Змейка.exe
+     1>Построение проекта "c:\Users\Алексей\documents\visual studio 2012\Projects\Игра Змейка\Игра Змейка\Игра Змейка.vcxproj" завершено (целевые объекты Build).
+
+Построение успешно завершено.
+
+Затраченное время: 00:00:11.12

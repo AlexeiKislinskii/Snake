@@ -1,0 +1,47 @@
+﻿Построение начато 20.03.2015 1:13:09.
+     1>Проект "C:\Users\Алексей\Dropbox\Портфолио\Игра Змейка\Игра Змейка\Игра Змейка.vcxproj" в узле 2 (целевые объекты Build).
+     1>ClCompile:
+         D:\Visual12\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /MTd /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt all.cpp main.cpp
+         all.cpp
+     1>all.cpp(226): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+     1>all.cpp(230): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+     1>all.cpp(363): warning C4244: аргумент: преобразование "double" в "unsigned long", возможна потеря данных
+     1>all.cpp(363): warning C4996: '_sleep': This function or variable has been superceded by newer library or operating system functionality. Consider using Sleep instead. See online help for details.
+                 D:\Visual12\VC\include\stdlib.h(881): см. объявление "_sleep"
+     1>all.cpp(364): warning C4244: аргумент: преобразование "double" в "unsigned long", возможна потеря данных
+     1>all.cpp(364): warning C4996: '_sleep': This function or variable has been superceded by newer library or operating system functionality. Consider using Sleep instead. See online help for details.
+                 D:\Visual12\VC\include\stdlib.h(881): см. объявление "_sleep"
+     1>all.cpp(365): warning C4244: аргумент: преобразование "double" в "unsigned long", возможна потеря данных
+     1>all.cpp(365): warning C4996: '_sleep': This function or variable has been superceded by newer library or operating system functionality. Consider using Sleep instead. See online help for details.
+                 D:\Visual12\VC\include\stdlib.h(881): см. объявление "_sleep"
+     1>all.cpp(366): warning C4244: аргумент: преобразование "double" в "unsigned long", возможна потеря данных
+     1>all.cpp(366): warning C4996: '_sleep': This function or variable has been superceded by newer library or operating system functionality. Consider using Sleep instead. See online help for details.
+                 D:\Visual12\VC\include\stdlib.h(881): см. объявление "_sleep"
+     1>all.cpp(367): warning C4996: '_sleep': This function or variable has been superceded by newer library or operating system functionality. Consider using Sleep instead. See online help for details.
+                 D:\Visual12\VC\include\stdlib.h(881): см. объявление "_sleep"
+     1>all.cpp(368): warning C4244: аргумент: преобразование "double" в "unsigned long", возможна потеря данных
+     1>all.cpp(368): warning C4996: '_sleep': This function or variable has been superceded by newer library or operating system functionality. Consider using Sleep instead. See online help for details.
+                 D:\Visual12\VC\include\stdlib.h(881): см. объявление "_sleep"
+     1>all.cpp(369): warning C4244: аргумент: преобразование "double" в "unsigned long", возможна потеря данных
+     1>all.cpp(369): warning C4996: '_sleep': This function or variable has been superceded by newer library or operating system functionality. Consider using Sleep instead. See online help for details.
+                 D:\Visual12\VC\include\stdlib.h(881): см. объявление "_sleep"
+     1>all.cpp(370): warning C4244: аргумент: преобразование "double" в "unsigned long", возможна потеря данных
+     1>all.cpp(370): warning C4996: '_sleep': This function or variable has been superceded by newer library or operating system functionality. Consider using Sleep instead. See online help for details.
+                 D:\Visual12\VC\include\stdlib.h(881): см. объявление "_sleep"
+     1>all.cpp(371): warning C4244: аргумент: преобразование "double" в "unsigned long", возможна потеря данных
+     1>all.cpp(371): warning C4996: '_sleep': This function or variable has been superceded by newer library or operating system functionality. Consider using Sleep instead. See online help for details.
+                 D:\Visual12\VC\include\stdlib.h(881): см. объявление "_sleep"
+     1>all.cpp(372): warning C4996: '_sleep': This function or variable has been superceded by newer library or operating system functionality. Consider using Sleep instead. See online help for details.
+                 D:\Visual12\VC\include\stdlib.h(881): см. объявление "_sleep"
+         main.cpp
+       Link:
+         D:\Visual12\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Алексей\Dropbox\Портфолио\Игра Змейка\Release\Игра Змейка.exe" /INCREMENTAL:NO /NOLOGO /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /manifestinput:D:\Visual12\VC\Include\Manifest\dpiaware.manifest /DEBUG /PDB:"C:\Users\Алексей\Dropbox\Портфолио\Игра Змейка\Release\Игра Змейка.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Алексей\Dropbox\Портфолио\Игра Змейка\Release\Игра Змейка.lib" /MACHINE:X86 /SAFESEH Release\all.obj
+         Release\main.obj
+         Создание кода
+         Создание кода завершено
+         Игра Змейка.vcxproj -> C:\Users\Алексей\Dropbox\Портфолио\Игра Змейка\Release\Игра Змейка.exe
+     1>Построение проекта "C:\Users\Алексей\Dropbox\Портфолио\Игра Змейка\Игра Змейка\Игра Змейка.vcxproj" завершено (целевые объекты Build).
+
+Построение успешно завершено.
+
+Затраченное время: 00:00:19.89
