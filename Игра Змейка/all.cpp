@@ -44,6 +44,14 @@ Field::Field(int x_init,int y_init):x(x_init+2),y(y_init+2){};
 Field::~Field(){FreeArray(map);};
 void Field::Init()
 {
+  CONSOLE_CURSOR_INFO info;
+  HANDLE consoleHandle = GetStdHandle( STD_OUTPUT_HANDLE );
+  GetConsoleCursorInfo( consoleHandle, &info );
+  info.bVisible = FALSE;
+  SetConsoleCursorInfo( consoleHandle, &info );
+
+  srand( ( size_t )time( 0 ) );
+
 	unsigned int size =x*y;
 	map = CreateArray(size);
 	for(unsigned int i = 0;i<size;++i)map[i]=' ';
@@ -129,7 +137,7 @@ int Field::SnakeMove()
 			{   
 				KeyStroke = _getch();
 				if(KeyStroke==72&&Direction!=1&&Direction!=3){Direction=1;Pixel='^';}
-				else if(KeyStroke==80&&Direction!=1&&Direction!=3){Direction=3;Pixel='V';}
+				else if(KeyStroke==80&&Direction!=1&&Direction!=3){Direction=3;Pixel='v';}
 				else if(KeyStroke==75&&Direction!=2&&Direction!=4){Direction=4;Pixel='<';}
 				else if(KeyStroke==77&&Direction!=2&&Direction!=4){Direction=2;Pixel='>';}
 			}
@@ -140,7 +148,7 @@ int Field::SnakeMove()
 			if(result==5)result=1;
 			if(result==0)result=4;
 			if(result==1){Direction=1;Pixel='^';}
-			else if(result==3){Direction=3;Pixel='V';}
+			else if(result==3){Direction=3;Pixel='v';}
 			else if(result==4){Direction=4;Pixel='<';}
 			else if(result==2){Direction=2;Pixel='>';}
 		}
@@ -178,8 +186,8 @@ int Field::SnakeMove()
 			Print(DeltaPoint);
 			Print(snake.getTailX());
 			Print(snake.getHeadX());
-			setSpeed();
 			
+      Sleep((size_t)(165 - (15 * ((lenth / 10) + 1) * 0.6)));
 		}	
 		else if(realplayer) return 0;
 		else return 40;
@@ -189,51 +197,50 @@ int Field::Scan(int Direction,int input)
 {
 	if(Direction==0)Direction=4;
 	if(Direction==5)Direction=1;
-	if(Direction==1)
-	{
-		if(map[input-x]==' ')return 1;//free space
-		else if(map[input-x]=='A')return 2;//food
-		else if(map[input-x]=='*')return 3;//border
-		else return 4;//snake
-	}
-	else if(Direction==3)
-	{
-		if(map[input+x]==' ')return 1;//free space
-		else if(map[input+x]=='A')return 2;//food
-		else if(map[input+x]=='*')return 3;//border
-		else return 4;//snake
-	}
-	else if(Direction==2)
-	{
-		if(map[input+1]==' ')return 1;//free space
-		else if(map[input+1]=='A')return 2;//food
-		else if(map[input+1]=='*')return 3;//border
-		else return 4;//snake
-	}
-	else if(Direction==4)
-	{
-		if(map[input-1]==' ')return 1;//free space
-		else if(map[input-1]=='A')return 2;//food
-		else if(map[input-1]=='*')return 3;//border
-		else return 4;//snake
-	}
-	return 40;//error
+
+  char pixel;
+
+  switch (Direction)
+  {
+  case 1:
+    pixel = map[input - x];
+    break;
+  case 2:
+    pixel = map[input + 1];
+    break;
+  case 3:
+    pixel = map[input + x];
+    break;
+  case 4:
+    pixel = map[input - 1];
+    break;
+  default:
+    return 40;//error
+  }
+
+  switch (pixel)
+  {
+  case (int)' ': return 1;//free space
+  case (int)'A': return 2;//food
+  case (int)'*': return 3;//border
+  default      : return 4;//snake
+  }
 }
+
 int Field::Food()
 {
-	unsigned int FoodIndex, size;
-	size = x*y;
-	srand(time(0));
-	FoodIndex=rand()%size;
-	while(map[FoodIndex]!=' ')
+	unsigned int FoodIndex, size = x * y;
+
+	do
 	{
-		srand(time(0)*FoodIndex);
-		FoodIndex=rand()%size;
-	}
+    FoodIndex = rand() % size;
+  } while ( map[FoodIndex] != ' ' );
+
 	map[FoodIndex]='A';
 	Print(FoodIndex);
 	return FoodIndex;
 }
+
 int Field::PerfectPlayer(int Tail,int Food)
 {
 	Coord tail=IndexToXY(Tail);
@@ -277,10 +284,6 @@ int Field::PerfectPlayer(int Tail,int Food)
 		
 		while(Algorithm)
 		{
-			////нужен весовой алгоритм поиска пути
-				//if(Scan(Direction+1,Tail)<3){TimeToLeftOrRightHandAlgorithm=false;return Direction+1;}
-				//else if(Scan(Direction-1,Tail)<3){TimeToLeftOrRightHandAlgorithm=false;return Direction-1;}
-				//else return 40;//gameover
 			int temp1=0;
 			int temp2=0;
 			int Out;
@@ -348,7 +351,7 @@ void Field::GameEnd(int result)
 	if(result==0)cout<<"Вы проиграли!"<<endl;
 	else if(result==1)cout<<"Вы выиграли!"<<endl;
 	else if(result==40)cout<<"Компьютер проиграл О_о"<<endl;
-	else if(result==41)cout<<"Обучение окончено."<<endl;
+	else if(result==41)cout<<"Компьютер выиграл."<<endl;
 
 	while(1)
 	{
@@ -358,19 +361,7 @@ void Field::GameEnd(int result)
 		if(_getch()==27)exit(0);
 	}
 };
-void Field::setSpeed()
-{
-	if(lenth<10)_sleep((165-15*0.6));
-	else if(lenth>=10&&lenth<20)_sleep((165-15*1.2));
-	else if(lenth>=20&&lenth<30)_sleep((165-15*1.8));
-	else if(lenth>=30&&lenth<40)_sleep((165-15*2.4));
-	else if(lenth>=40&&lenth<50)_sleep((165-15*3));
-	else if(lenth>=50&&lenth<60)_sleep((165-15*3.6));
-	else if(lenth>=60&&lenth<70)_sleep((165-15*4.2));
-	else if(lenth>=70&&lenth<80)_sleep((165-15*4.8));
-	else if(lenth>=80&&lenth<90)_sleep((165-15*5.4));
-	else if(lenth>=90)_sleep((165-15*6));
-};
+
 double Field::Distance(Coord point1,Coord point2)
 {
 	double temp=0;
